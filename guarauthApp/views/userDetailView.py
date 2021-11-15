@@ -14,12 +14,11 @@ class UserDetailView(generics.RetrieveAPIView):
 class UserUpdateView(generics.UpdateAPIView):
     queryset = User.objects.all()
     serializer_class = UserSerializer
-    def update(self, request, *args, **kwargs):
+    def put(self, request, *args, **kwargs):
         return super().update(request, *args, **kwargs)
 
-class UserDeleteView(generics.UpdateAPIView):
+class UserDeleteView(generics.DestroyAPIView):
     queryset = User.objects.all()
     serializer_class = UserSerializer
-
-    def update(self, request, *args, **kwargs):
-        return super().update(request, *args, **kwargs)
+    def delete(self, request, *args, **kwargs):
+        return super().delete(request, *args, **kwargs)
