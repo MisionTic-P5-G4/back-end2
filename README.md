@@ -14,7 +14,6 @@ Para los token, se tiene la generación con la crecaión de un usuario, refresh,
 
 ## CRUD User
 A contiuación se describen los servicios disponibles para el crud de User
-!["AdminLTE Presentation"](<img src="https://drive.google.com/file/d/1eGitzV1bj5UC_O73FqTmb8tjX_lpREwf/view"/> "AdminLTE Presentation")
 
 ### Create:
 Link del servicio
@@ -40,7 +39,7 @@ Ejemplo respuesta JSON:
 }
 ```
 Respuesta ok:
-!["AdminLTE Presentation"](https://drive.google.com/file/d/1eGitzV1bj5UC_O73FqTmb8tjX_lpREwf/view "AdminLTE Presentation")
+!["AdminLTE Presentation"](https://github.com/Deperius/backend-auth/blob/main/segundo%20sprint/createUser.png "AdminLTE Presentation")
 
 ### Get
 Link del servicio
@@ -58,7 +57,7 @@ Ejemplo respuesta JSON:
 }
 ```
 Respuesta ok:
-!["AdminLTE Presentation"](https://drive.google.com/file/d/1eGitzV1bj5UC_O73FqTmb8tjX_lpREwf/view "AdminLTE Presentation")
+!["AdminLTE Presentation"](https://github.com/Deperius/backend-auth/blob/main/segundo%20sprint/getUser.png "AdminLTE Presentation")
 
 ### Update:
 Link del servicio
@@ -86,7 +85,7 @@ Ejemplo respuesta JSON:
 }
 ```
 Respuesta ok:
-!["AdminLTE Presentation"](https://drive.google.com/file/d/1eGitzV1bj5UC_O73FqTmb8tjX_lpREwf/view "AdminLTE Presentation")
+!["AdminLTE Presentation"](https://github.com/Deperius/backend-auth/blob/main/segundo%20sprint/UserUpdate.png "AdminLTE Presentation")
 
 ### Delete
 Link del servicio
@@ -94,7 +93,7 @@ Link del servicio
 https://mintic2022-p5-g4-dw-be-auth.herokuapp.com/user/6/delete/
 ```
 Respuesta ok:
-!["AdminLTE Presentation"](https://drive.google.com/file/d/1eGitzV1bj5UC_O73FqTmb8tjX_lpREwf/view "AdminLTE Presentation")
+!["AdminLTE Presentation"](https://github.com/Deperius/backend-auth/blob/main/segundo%20sprint/DELETEOK.png "AdminLTE Presentation")
 
 
 ## Autentificación
@@ -124,7 +123,7 @@ Ejemplo respuesta JSON:
 }
 ```
 Respuesta ok:
-!["AdminLTE Presentation"](https://drive.google.com/file/d/1eGitzV1bj5UC_O73FqTmb8tjX_lpREwf/view "AdminLTE Presentation")
+!["AdminLTE Presentation"](https://github.com/Deperius/backend-auth/blob/main/segundo%20sprint/createUser.png "AdminLTE Presentation")
 
 ### Login
 Link del servicio
@@ -146,7 +145,7 @@ Ejemplo respuesta JSON:
 }
 ```
 Respuesta ok:
-!["AdminLTE Presentation"](https://drive.google.com/file/d/1eGitzV1bj5UC_O73FqTmb8tjX_lpREwf/view "AdminLTE Presentation")
+!["AdminLTE Presentation"](https://github.com/Deperius/backend-auth/blob/main/segundo%20sprint/loginUser.png "AdminLTE Presentation")
 
 ### verifyToken
 Link del servicio
@@ -187,7 +186,8 @@ Ejemplo respuesta JSON:
 }
 ```
 Respuesta ok:
-!["AdminLTE Presentation"](https://drive.google.com/file/d/1eGitzV1bj5UC_O73FqTmb8tjX_lpREwf/view "AdminLTE Presentation")
+!["AdminLTE Presentation"](https://github.com/Deperius/backend-auth/blob/main/segundo%20sprint/refreshOk.png "AdminLTE Presentation")
 
 
-## Image Credits
+## Créditos por base del readme
+[AdminLTE](https://github.com/ColorlibHQ/AdminLTE/blob/master/README.md)
