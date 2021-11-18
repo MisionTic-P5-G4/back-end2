@@ -78,8 +78,8 @@ REST_FRAMEWORK = {
 }
 
 SPECTACULAR_SETTINGS = {
-    'TITLE': 'Your Project API',
-    'DESCRIPTION': 'Your project description',
+    'TITLE': 'Guarderia de perros Autenticacion',
+    'DESCRIPTION': 'authentication and users CRUD',
     'VERSION': '1.0.0',
     # OTHER SETTINGS
 }
