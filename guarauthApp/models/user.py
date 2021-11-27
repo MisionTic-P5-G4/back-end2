@@ -33,7 +33,7 @@ class User(AbstractBaseUser, PermissionsMixin):
     name = models.CharField('Name', max_length = 50, null=False)
     email = models.EmailField('Email', max_length = 100, null=False)
     phone = models.BigIntegerField('Phone',default=0)
-    adm = models.BooleanField('admin', null = False, default= False)
+    admin = models.BooleanField('admin', default= False, null= False)
 
     def save(self, **kwargs):
         some_salt = 'mMUj0DrIK6vgtdIYepkIxN' 

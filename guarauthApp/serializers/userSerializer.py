@@ -17,5 +17,5 @@ class UserSerializer(serializers.ModelSerializer):
             'name': user.name,
             'email': user.email,
             'phone': user.phone,
-            'admin': user.adm
+            'admin': user.admin
         }

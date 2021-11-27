@@ -1,4 +1,5 @@
 from django.conf import settings
+from django.db.models import query
 from rest_framework import status, generics
 
 from guarauthApp.models.user import User
@@ -22,3 +23,9 @@ class UserDeleteView(generics.DestroyAPIView):
     serializer_class = UserSerializer
     def delete(self, request, *args, **kwargs):
         return super().delete(request, *args, **kwargs)
+
+class UserListView(generics.ListAPIView):
+    queryset = User.objects.all()
+    serializer_class = UserSerializer
+    def list(self, request, *args, **kwargs):
+        return super().list(request, *args, **kwargs)
