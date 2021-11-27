@@ -4,7 +4,7 @@ from guarauthApp.models.user import User
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
-        fields = ['id', 'username', 'password', 'name', 'email','phone']
+        fields = ['id', 'username', 'password', 'name', 'email','phone','admin']
 
     def create(self, validated_data):
         return super().create(validated_data)
@@ -16,5 +16,6 @@ class UserSerializer(serializers.ModelSerializer):
             'username': user.username,
             'name': user.name,
             'email': user.email,
-            'phone': user.phone
+            'phone': user.phone,
+            'admin': user.adm
         }
