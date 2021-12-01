@@ -9,7 +9,7 @@ Para los token, se tiene la generación con la crecaión de un usuario, refresh,
 | Servicio | funcionalidad| funcionalidad | funcionalidad | funcionalidad |
 | --------- | --------- | --------- | --------- | --------- |
 | Autentificación | login | refresh | verifyToken | user |
-| CRUD User| last 2 versions| last 2 versions| last 2 versions| last 2 versions|
+| CRUD User| Create| getById </br>getAll| Update| Delete|
 
 
 ## CRUD User
@@ -53,11 +53,39 @@ Ejemplo respuesta JSON:
     "username": "fjgomezpe",
     "name": "francisco",
     "email": "fjgomezpe@misionTIC.com",
-    "phone": 3203448555
+    "phone": 3203448555,
+    "admin": false
 }
 ```
 Respuesta ok:
 !["AdminLTE Presentation"](https://github.com/Deperius/backend-auth/blob/main/segundo%20sprint/getUser.png "AdminLTE Presentation")
+
+### GetAll
+Link del servicio
+```bash
+https://mintic2022-p5-g4-dw-be-auth.herokuapp.com/user/getAll
+```
+Ejemplo respuesta JSON:
+```bash
+[
+    {
+    "id": 0,
+    "username": "string",
+    "name": "string",
+    "email": "user@example.com",
+    "phone": 9223372036854776000,
+    "admin": true
+    },
+    {
+        "id": 1,
+        "username": "fjgomezpe",
+        "name": "francisco",
+        "email": "fjgomezpe@misionTIC.com",
+        "phone": 3203448555,
+        "admin": true
+    }
+]
+```
 
 ### Update:
 Link del servicio
@@ -82,6 +110,7 @@ Ejemplo respuesta JSON:
     "name": "modificado2",
     "email": "modificado@misionTIC.com",
     "phone": 3127775555
+    "admin": false
 }
 ```
 Respuesta ok:
