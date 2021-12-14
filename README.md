@@ -1,7 +1,7 @@
 # [Guardería - BE-auth-&-Users-CRUD](https://mintic2022-p5-g4-dw-be-auth.herokuapp.com/api/schema/swagger-ui/)
 
-**BE-auth-&-Users-CRUD** Microservicio para generar y verificar tokens de acceso y refresh. Para usuarios, se cuenta con get de un solo usuario, delete, update y create.
-Para los token, se tiene la generación con la crecaión de un usuario, refresh, que da nuevo token de acceso, login que genera tokens de acceso y refresh. Colo último, se tiene verfyToken.
+**BE-auth-&-Users-CRUD** Microservicio para generar y verificar tokens de acceso y refresh. Para usuarios, se cuenta con get de un solo usuario y de todos en la base de datos, delete, update y create.
+Para los token, se tiene la generación con la crecaión de un usuario, refresh, que da nuevo token de acceso, login que genera tokens de acceso y refresh. Como último, se tiene verfyToken.
 
 **Vista de documentación con swagger en [https://mintic2022-p5-g4-dw-be-auth.herokuapp.com/api/schema/swagger-ui/](https://mintic2022-p5-g4-dw-be-auth.herokuapp.com/api/schema/swagger-ui/)**
 
@@ -28,7 +28,8 @@ Ejemplo entrada body JSON:
     "password": "contraseña",
     "name": "mi Nombre",
     "email": "miCorreo@misionTIC.com",
-    "phone": "3125559977"
+    "phone": "3125559977",
+    "admin": false
 }
 ```
 Ejemplo respuesta JSON:
@@ -38,8 +39,6 @@ Ejemplo respuesta JSON:
     "access": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjM3MTkwNDUxLCJqdGkiOiJjOWRlMGFhNThhN2Y0NDI3YWUwYzc0MDc0MDg0ZGI5YiIsInVzZXJfaWQiOjZ9.DRLBa_soZ0v7yznrQoxpOQMaOTLsRNyofl7PFTfo0Ik"
 }
 ```
-Respuesta ok:
-!["AdminLTE Presentation"](https://github.com/Deperius/backend-auth/blob/main/segundo%20sprint/createUser.png "AdminLTE Presentation")
 
 ### Get
 Link del servicio
@@ -57,13 +56,11 @@ Ejemplo respuesta JSON:
     "admin": false
 }
 ```
-Respuesta ok:
-!["AdminLTE Presentation"](https://github.com/Deperius/backend-auth/blob/main/segundo%20sprint/getUser.png "AdminLTE Presentation")
 
 ### GetAll
 Link del servicio
 ```bash
-https://mintic2022-p5-g4-dw-be-auth.herokuapp.com/user/getAll
+https://mintic2022-p5-g4-dw-be-auth.herokuapp.com/user/getAll/
 ```
 Ejemplo respuesta JSON:
 ```bash
@@ -99,7 +96,8 @@ Ejemplo entrada body JSON:
     "password": "contraseña",
     "name": "modificado2",
     "email": "modificado@misionTIC.com",
-    "phone": "3127775555"
+    "phone": "3127775555",
+    "admin": false
 }
 ```
 Ejemplo respuesta JSON:
@@ -109,25 +107,22 @@ Ejemplo respuesta JSON:
     "username": "modificado",
     "name": "modificado2",
     "email": "modificado@misionTIC.com",
-    "phone": 3127775555
+    "phone": 3127775555,
     "admin": false
 }
 ```
-Respuesta ok:
-!["AdminLTE Presentation"](https://github.com/Deperius/backend-auth/blob/main/segundo%20sprint/UserUpdate.png "AdminLTE Presentation")
 
 ### Delete
 Link del servicio
 ```bash
 https://mintic2022-p5-g4-dw-be-auth.herokuapp.com/user/6/delete/
 ```
-Respuesta ok:
-!["AdminLTE Presentation"](https://github.com/Deperius/backend-auth/blob/main/segundo%20sprint/DELETEOK.png "AdminLTE Presentation")
+
+
 
 
 ## Autentificación
 A contiuación se describen los servicios disponibles para el crud de User
-!["AdminLTE Presentation"](<img src="https://drive.google.com/file/d/1eGitzV1bj5UC_O73FqTmb8tjX_lpREwf/view"/> "AdminLTE Presentation")
 
 ### user:
 Link del servicio
@@ -141,7 +136,8 @@ Ejemplo entrada body JSON:
     "password": "contraseña",
     "name": "mi Nombre",
     "email": "miCorreo@misionTIC.com",
-    "phone": "3125559977"
+    "phone": "3125559977",
+    "admin": false
 }
 ```
 Ejemplo respuesta JSON:
@@ -151,8 +147,6 @@ Ejemplo respuesta JSON:
     "access": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjM3MTkwNDUxLCJqdGkiOiJjOWRlMGFhNThhN2Y0NDI3YWUwYzc0MDc0MDg0ZGI5YiIsInVzZXJfaWQiOjZ9.DRLBa_soZ0v7yznrQoxpOQMaOTLsRNyofl7PFTfo0Ik"
 }
 ```
-Respuesta ok:
-!["AdminLTE Presentation"](https://github.com/Deperius/backend-auth/blob/main/segundo%20sprint/createUser.png "AdminLTE Presentation")
 
 ### Login
 Link del servicio
@@ -173,8 +167,6 @@ Ejemplo respuesta JSON:
     "access": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjM3MTkwMDUwLCJqdGkiOiJhYzNlOWJhMzQyZDg0YzMxYmUzMDIyZWRlYzY5MTZhMCIsInVzZXJfaWQiOjF9.7U-gPAF78TNPLNgAUXp87HZnh6v5-G7KEmw1vxctpxM"
 }
 ```
-Respuesta ok:
-!["AdminLTE Presentation"](https://github.com/Deperius/backend-auth/blob/main/segundo%20sprint/loginUser.png "AdminLTE Presentation")
 
 ### verifyToken
 Link del servicio
@@ -193,8 +185,6 @@ Ejemplo respuesta JSON:
     "UserId": 1
 }
 ```
-Respuesta ok:
-!["AdminLTE Presentation"](https://drive.google.com/file/d/1eGitzV1bj5UC_O73FqTmb8tjX_lpREwf/view "AdminLTE Presentation")
 
 ### Refresh
 Link del servicio
@@ -214,8 +204,6 @@ Ejemplo respuesta JSON:
     "access": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjM3MTkwMjM5LCJqdGkiOiJiYTczOTlhY2Q4N2Q0YzFiYWIzZjdhMWIxYWVkNmY5ZCIsInVzZXJfaWQiOjF9.z_yZfDfux_JdGMphghtra_s8ZRnNHEN-8wzw7Ri_QjU"
 }
 ```
-Respuesta ok:
-!["AdminLTE Presentation"](https://github.com/Deperius/backend-auth/blob/main/segundo%20sprint/refreshOk.png "AdminLTE Presentation")
 
 
 ## Créditos por base del readme
